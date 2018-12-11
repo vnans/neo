@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit ImgClean{% endblock %}
+
+{% block body %}
+    <h1>Edit ImgClean</h1>
+
+    {{ include('img_clean/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('img_clean_index') }}">back to list</a>
+
+    {{ include('img_clean/_delete_form.html.twig') }}
+{% endblock %}

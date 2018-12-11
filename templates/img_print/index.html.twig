@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ImgPrint index{% endblock %}
+
+{% block body %}
+    <h1>ImgPrint index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Image</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for img_print in img_prints %}
+            <tr>
+                <td>{{ img_print.id }}</td>
+                <td>{{ img_print.titre }}</td>
+                <td>{{ img_print.image }}</td>
+                <td>
+                    <a href="{{ path('img_print_show', {'id': img_print.id}) }}">show</a>
+                    <a href="{{ path('img_print_edit', {'id': img_print.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('img_print_new') }}">Create new</a>
+{% endblock %}

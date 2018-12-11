@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ImgPrint{% endblock %}
+
+{% block body %}
+    <h1>ImgPrint</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ img_print.id }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ img_print.titre }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td>{{ img_print.image }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('img_print_index') }}">back to list</a>
+
+    <a href="{{ path('img_print_edit', {'id': img_print.id}) }}">edit</a>
+
+    {{ include('img_print/_delete_form.html.twig') }}
+{% endblock %}

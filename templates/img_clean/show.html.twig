@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ImgClean{% endblock %}
+
+{% block body %}
+    <h1>ImgClean</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ img_clean.id }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ img_clean.titre }}</td>
+            </tr>
+            <tr>
+                <th>Img</th>
+                <td>{{ img_clean.img }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('img_clean_index') }}">back to list</a>
+
+    <a href="{{ path('img_clean_edit', {'id': img_clean.id}) }}">edit</a>
+
+    {{ include('img_clean/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,36 +1,68 @@
 <!DOCTYPE html>
-<html>
-    <head> 
-        <meta charset="UTF-8">
-        <title>{% block title %}Neo MultiServices{% endblock %}</title>
-		  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-		  <meta content="" name="keywords">
-		  <meta content="" name="description">
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Neo MultiServices{% endblock %}</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
 
-		  <!-- Favicons -->
-		  <link href="{{ asset('img/favicon.ico') }}" rel="icon">
-		  <link href="{{ asset('img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+  <!-- Favicons -->
+  <link href="img/favicon.ico" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
-		  <!-- Google Fonts -->
-		  <link href=" {{ asset('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700') }}" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href=" {{ asset('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700')}}" rel="stylesheet">
+ {% block stylesheets %}
+  <!-- Bootstrap CSS File -->
+  <link href=" {{ asset('lib/bootstrap/css/bootstrap.min.css')}}  " rel="stylesheet">
 
-		 
-        {% block stylesheets %}
- <!-- Bootstrap CSS File -->
-		  <link href=" {{ asset('lib/bootstrap/css/bootstrap.min.css')}} " rel="stylesheet">
+   <!-- Libraries CSS Files -->
+    <!-- Bootstrap CSS File -->
+  <link href=" {{ asset('lib/bootstrap/css/bootstrap.min.css')}}  " rel="stylesheet">
+  <link href=" {{ asset('lib/font-awesome/css/font-awesome.min.css')}}  " rel="stylesheet">
+  <link href=" {{ asset('lib/animate/animate.min.css')}}  " rel="stylesheet">
+  <link href=" {{ asset('lib/ionicons/css/ionicons.min.css')}}  " rel="stylesheet">
+  <link href=" {{ asset('lib/owlcarousel/assets/owl.carousel.min.css')}}  " rel="stylesheet">
+  <link href=" {{ asset('lib/lightbox/css/lightbox.min.css')}}  " rel="stylesheet">
 
-		  <!-- Libraries CSS Files -->
-		  <link href="{{ asset('lib/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
-		  <link href="{{ asset('lib/animate/animate.min.css')}}" rel="stylesheet">
-		  <link href="{{ asset('lib/ionicons/css/ionicons.min.css')}}" rel="stylesheet">
-		  <link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
-		  <link href="{{ asset('lib/lightbox/css/lightbox.min.css')}}" rel="stylesheet">
+  <!-- Main Stylesheet File -->
+  <link href=" {{ asset('css/style.css')}}  " rel="stylesheet">
 
-		  <!-- Main Stylesheet File -->
-		  <link href="{{ path('articles_new') }}" rel="stylesheet">
+  <!-- =======================================================
+    Theme Name: BizPage
+    Theme URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+ 
+{% endblock %}
+</head>
 
-        {% endblock %}
-    </head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+       
     <body>
     	  <header id="header">
     <div class="container-fluid">
@@ -45,9 +77,9 @@
         <ul class="nav-menu">
            <li class="menu-active"><a href="index.html">Accueil</a></li>
        <!--    <li><a href="presentation.html">Présentation</a></li> -->
-          <li><a href="services.html">Produits et Services</a></li>
-          <li><a href="reference.html">Nos références</a></li>
-           <li><a href="{{ path('articles_index') }}">Boutique</a></li>
+          <li><a href="{{ path('services_index') }}">Produits et Services</a></li>
+        {#   <li><a href="reference.html"></a></li> #}
+           <li><a href="{{ path('articles_index') }}">La boutique Pimp my tee</a></li>
          <!--   <li><a href="#team">Notre équipe</a></li>
          <li class="menu-has-children"><a href="">Drop Down</a>
             <ul>
@@ -62,10 +94,82 @@
       </nav><!-- #nav-menu-container -->
     </div>
   </header><!-- #header -->
+
+
         {% block body %}{% endblock %}
 
 
+ <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+   {#  <div class="footer-top">
+      <div class="container">
+        <div class="row">
 
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h4>Neo MultiServices </h4>
+            <p> A la pointe de votre satisfaction.</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Liens utiles</h4>
+            <ul>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#">Accueil</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#">A propos de nous</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#">Produits et Services</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#">Termes de services</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#">Politiques privées </a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contactez nous</h4>
+            <p>
+               Abidjan cocody,  <br>
+               Angré bessikoi carrefour GESTOCI <br>
+             Côte d'Ivoîre. <br>
+              <strong>Téléphone:</strong> +225 84 41 51 56 <br>
+
+               </strong> +225 40 81 22 63 <br>
+              <strong>Email:</strong> info@Neo-MultiServices.com<br>
+            </p>
+
+            <div class="social-links">
+              <a href="https://twitter.com/Neo MultiServices98025" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="https://web.facebook.com/neoprintservices/photos/a.1817637565118525/2173544969527781/?type=1&theater" class="facebook"><i class="fa fa-facebook"></i></a>
+             
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-newsletter">
+            <h4>Notre  Newsletter</h4>
+            <p>Restez au parfum de nos innovations en vous abonnant a la newsletter .</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit"  value="Souscrire">
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div> #}
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Neo MultiServices</strong>. Tout droit  Reservés
+      </div>
+      <div class="credits">
+        <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=BizPage
+        -->
+        Designed by <a href="">Neo MultiServices </a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
         {% block javascripts %}
 		 <!-- JavaScript Libraries -->
 		  <script src="{{ asset('lib/jquery/jquery.min.js') }} "></script>

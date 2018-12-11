@@ -1,0 +1,31 @@
+<?php
+
+namespace App\Form;
+
+use App\Entity\Services;
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
+
+class ServicesType extends AbstractType
+{
+    public function buildForm(FormBuilderInterface $builder, array $options)
+    {
+        $builder
+            ->add('libelle')
+            ->add('description')
+            ->add('domaine1')
+            ->add('domaine2')
+            ->add('domaine3')
+            ->add('domaine4')
+            ->add('domaine5')
+        ;
+    }
+
+    public function configureOptions(OptionsResolver $resolver)
+    {
+        $resolver->setDefaults([
+            'data_class' => Services::class,
+        ]);
+    }
+}

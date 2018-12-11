@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New ImgClean{% endblock %}
+
+{% block body %}
+    <h1>Create new ImgClean</h1>
+
+    {{ include('img_clean/_form.html.twig') }}
+
+    <a href="{{ path('img_clean_index') }}">back to list</a>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ImgClean index{% endblock %}
+
+{% block body %}
+    <h1>ImgClean index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Img</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for img_clean in img_cleans %}
+            <tr>
+                <td>{{ img_clean.id }}</td>
+                <td>{{ img_clean.titre }}</td>
+                <td>{{ img_clean.img }}</td>
+                <td>
+                    <a href="{{ path('img_clean_show', {'id': img_clean.id}) }}">show</a>
+                    <a href="{{ path('img_clean_edit', {'id': img_clean.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('img_clean_new') }}">Create new</a>
+{% endblock %}
