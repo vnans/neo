@@ -3,45 +3,45 @@
 {% block title %}Services index{% endblock %}
 
 {% block body %}
-    <h1>Services index</h1>
+ <section id="services">
+      <div class="container">
 
-    <table class="table">
-        <thead>
+        <header class="section-header wow fadeInUp">
+          <h3>Services</h3>
+          <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus, ad pro quaestio laboramus. Ei ubique vivendum pro. At ius nisl accusam lorenta zanos paradigno tridexa panatarel.</p>
+        </header>
+
+        <div class="row">
+
+{% for service in services %}
+          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
+            <div class="icon"><i class="ion-ios-analytics-outline"></i></div>
+            <h4 class="title"><a href="">{{ service.libelle }}</a></h4>
+            <p class="description">{{ service.description }}</p>
+            <ul>
+                <li>{{ service.domaine1 }}</li>
+                <li>{{ service.domaine2 }}</li>
+                <li>{{ service.domaine3 }}</li>
+                <li>{{ service.domaine4 }}</li>
+                <li>{{ service.domaine5 }}</li>
+            </ul>
+           {# <a href="{{ path('services_show', {'id': service.id}) }}"> <button class="btn btn-warning" >Details</button> </a> #}
+           <a href="{{ path('img_print_index') }}"> <button class="btn btn-warning" >Détails</button> </a>
+          {#   <a href="{{ path('services_edit', {'id': service.id}) }}">edit</a> #}
+          </div>
+{% else %}
             <tr>
-                <th>Id</th>
-                <th>Libelle</th>
-                <th>Description</th>
-                <th>Domaine1</th>
-                <th>Domaine2</th>
-                <th>Domaine3</th>
-                <th>Domaine4</th>
-                <th>Domaine5</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for service in services %}
-            <tr>
-                <td>{{ service.id }}</td>
-                <td>{{ service.libelle }}</td>
-                <td>{{ service.description }}</td>
-                <td>{{ service.domaine1 }}</td>
-                <td>{{ service.domaine2 }}</td>
-                <td>{{ service.domaine3 }}</td>
-                <td>{{ service.domaine4 }}</td>
-                <td>{{ service.domaine5 }}</td>
-                <td>
-                    <a href="{{ path('services_show', {'id': service.id}) }}">show</a>
-                    <a href="{{ path('services_edit', {'id': service.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="9">no records found</td>
+                <td colspan="9">Aucun  services enregistré</td>
             </tr>
         {% endfor %}
-        </tbody>
-    </table>
+          
 
-    <a href="{{ path('services_new') }}">Create new</a>
+        </div>
+
+      </div>
+    </section><!-- #services -->
+    
+
+
+    <a href="{{ path('services_new') }}">creer un service</a>
 {% endblock %}

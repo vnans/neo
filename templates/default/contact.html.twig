@@ -1,0 +1,103 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ImgPrint index{% endblock %}
+
+{% block body %}
+    
+
+  <main id="main">
+
+    
+
+    <!--==========================
+      About Us Section
+    ============================-->
+    <section id="about">
+      <div class="container">
+
+        <header class="section-header">
+          <h3>Rétrouvez nous ici</h3>
+          <div class="col-md-12">
+          <iframe class="col-md-12" src="https://www.google.com/maps/d/embed?mid=1N4WX6YQ1NZBMZgB8fLRrfDAbdlmbrZxg" width="640" height="480"></iframe>
+          </div>
+        </header>
+
+        
+
+    <!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact" class="section-bg wow fadeInUp">
+      <div class="container">
+
+        <div class="section-header">
+          <h3>Contactez nous</h3>
+          <p>Nous sommes disponible H24</p>
+        </div>
+
+        <div class="row contact-info">
+         
+
+
+          <div class="col-md-4">
+            <div class="contact-address">
+              <i class="ion-ios-location-outline"></i>
+              <h3>Adresse</h3>
+              <address>
+                Abidjan Cocody, Angré bessikoi , carrefour GESTOCI
+              </address>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-phone">
+              <i class="ion-ios-telephone-outline"></i>
+              <h3>Téléphone</h3>
+              <p><a href="tel:+225 84415156">+225 84 41 51 56</a></p>
+              <p><a href="tel:+225 40812263">+225 40 81 22 63</a></p>
+              
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-email">
+              <i class="ion-ios-email-outline"></i>
+              <h3>Email</h3>
+              <p><a href="mailto:info@example.com">info@neo-multiservices.com</a></p>
+            </div>
+          </div>
+
+        </div>
+
+         {# <div class="form">
+          <div id="sendmessage">Your message has been sent. Thank you!</div>
+          <div id="errormessage"></div>
+          <form action="" method="post" role="form" class="contactForm">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Nom" data-rule="minlen:4" data-msg="Enter au moins 4 caractères SVP" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Enter un email valide SVP " />
+                <div class="validation"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Objet" data-rule="minlen:4" data-msg="Enter au moins 8 caractères SVP en objet SVPS" />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Ecrivez nous quelques chose SVP " placeholder="Message"></textarea>
+              <div class="validation"></div>
+            </div>
+            <div class="text-center"><button type="submit">Envoyer le Message</button></div>
+          </form>
+        </div> 
+ #}
+      </div>
+    </section><!-- #contact -->
+
+  </main>
+
+{% endblock %}

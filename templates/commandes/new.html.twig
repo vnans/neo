@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Commandes{% endblock %}
+
+{% block body %}
+ <!--==========================
+      Contact Section
+    ============================-->
+<section id="contact" class="section-bg wow fadeInUp">
+      <div class="container">
+
+        <div class="section-header">
+          <h3>Specifiez votre commande</h3>
+          <p></p>
+        </div>
+
+<div class="row contact-info">
+
+          <div class="col-md-6">
+            <div class="contact-address">
+               <img src="{{ asset('/img/articles/') }}{{ article.image }} " alt="{{ asset('public/img/articles/') }}{{ article.image }}">
+            </div>
+           
+          </div>
+
+          <div class="col-md-6">
+            {{ include('commandes/_form.html.twig') }}
+          </div>
+
+
+
+        </div>
+
+    
+
+   {#  <a href="{{ path('commandes_index') }}">back to list</a> #}
+        
+
+      </div>
+    </section><!-- #contact -->
+   
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Commandes index{% endblock %}
+
+{% block body %}
+    <h1>Commandes index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nomprenoms</th>
+                <th>Tel</th>
+                <th>Taille</th>
+                <th>Couleur</th>
+                <th>Texte</th>
+                <th>Article</th>
+                <th>Commentaire</th>
+                <th>Ladate</th>
+                <th>Slug</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for commande in commandes %}
+            <tr>
+                <td>{{ commande.id }}</td>
+                <td>{{ commande.Nomprenoms }}</td>
+                <td>{{ commande.tel }}</td>
+                <td>{{ commande.taille }}</td>
+                <td>{{ commande.couleur }}</td>
+                <td>{{ commande.texte }}</td>
+                <td>{{ commande.article }}</td>
+                <td>{{ commande.commentaire }}</td>
+                <td>{{ commande.ladate ? commande.ladate|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ commande.slug }}</td>
+                <td>
+                    <a href="{{ path('commandes_show', {'id': commande.id}) }}">show</a>
+                    <a href="{{ path('commandes_edit', {'id': commande.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="11">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    {# <a href="{{ path('commandes_new') }}">Create new</a> #}
+{% endblock %}

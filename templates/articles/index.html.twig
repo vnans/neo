@@ -3,14 +3,198 @@
 {% block title %}Articles index{% endblock %}
 
 {% block body %}
-    <h1>Articles index</h1>
+
+<!--==========================
+      Call To Action Section
+    ============================-->
+    <section id="call-to-action" class="wow fadeIn">
+      <div class="container text-center">
+        <h3>Pimp my tee</h3>
+        <p> Vous trouverez ici des idées de design pour vos personnalisations de Tee-shirt, choisissez votre modèle , definissez votre texte à ajouter et envoyé nous votre commande et vous serrez livré !    </p>
+        <a class="cta-btn" href="#commande">je commande</a>
+      </div>
+    </section><!-- #call-to-action -->
+<!--==========================
+      Portfolio Section
+    ============================-->
+    <section id="portfolio"  class="section-bg" >
+      <div class="container">
+
+        <header class="section-header">
+          <h3 class="section-title">Choisissez votre design</h3>
+        </header>
+
+        <div class="row">
+          <div class="col-lg-12">
+            {# <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">App</li>
+              <li data-filter=".filter-card">Card</li>
+              <li data-filter=".filter-web">Web</li>
+            </ul> #}
+          </div>
+        </div>
+
+        <div class="row portfolio-container" id="#commande">
+
+
+
+ {% for article in articles %}
+          <div class="col-lg-3 col-md-6 portfolio-item filter-app wow fadeInUp">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src=" {{ asset('img/articles/')}}{{ article.image }} " class="img-fluid" alt="">
+                <a href="{{ asset('img/articles/')}}{{ article.image }} " data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
+                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a href="#">{{ article.libelle }}</a></h4>
+                <p>{{ article.taille }}</p>
+                <p>{{article.collection }}  </p>
+                  <p> <a href="{{ path('commandes_new', {'id': article.id}) }}">  <button class="btn btn-default" > commander </button> </a> 
+                  </p>
+              </div>
+            </div>
+          </div>
+{% else %}
+            <tr>
+                <td colspan="6">Aucun article trouvé</td>
+            </tr>
+{% endfor %}
+
+         {#  <div class="col-lg-3 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="img/portfolio/web3.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio/web3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
+                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a href="#">Web 3</a></h4>
+                <p>Web</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="img/portfolio/app2.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio/app2.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
+                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a href="#">App 2</a></h4>
+                <p>App</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 portfolio-item filter-card wow fadeInUp">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="img/portfolio/card2.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio/card2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 2" title="Preview"><i class="ion ion-eye"></i></a>
+                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a href="#">Card 2</a></h4>
+                <p>Card</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="img/portfolio/web2.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio/web2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 2" title="Preview"><i class="ion ion-eye"></i></a>
+                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a href="#">Web 2</a></h4>
+                <p>Web</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="img/portfolio/app3.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio/app3.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Preview"><i class="ion ion-eye"></i></a>
+                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a href="#">App 3</a></h4>
+                <p>App</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 portfolio-item filter-card wow fadeInUp">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="img/portfolio/card1.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio/card1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 1" title="Preview"><i class="ion ion-eye"></i></a>
+                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a href="#">Card 1</a></h4>
+                <p>Card</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 portfolio-item filter-card wow fadeInUp" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="img/portfolio/card3.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio/card3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 3" title="Preview"><i class="ion ion-eye"></i></a>
+                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a href="#">Card 3</a></h4>
+                <p>Card</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="img/portfolio/web1.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio/web1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 1" title="Preview"><i class="ion ion-eye"></i></a>
+                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a href="#">Web 1</a></h4>
+                <p>Web</p>
+              </div>
+            </div>
+          </div> #}
+
+        </div>
+
+      </div>
+    </section><!-- #portfolio -->    
+    {# <h1>Articles index</h1>
 
     <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Libelle</th>
-                <th>Taille</th>
+                <th>Taille</th> 
                 <th>Collection</th>
                 <th>Image</th>
                 <th>actions</th>
@@ -35,7 +219,7 @@
             </tr>
         {% endfor %}
         </tbody>
-    </table>
+    </table>#}
 
-    <a href="{{ path('articles_new') }}">Create new</a>
+    <a href="{{ path('articles_new') }}">Create new</a> 
 {% endblock %}
