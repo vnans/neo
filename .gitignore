@@ -3,8 +3,10 @@
 /.env
 /public/bundles/
 /var/
-/test/
-/translation/
+/tests/
+/translations/
+/.htaccess
+/vendor/
 ###< symfony/framework-bundle ###
 
 ###> symfony/phpunit-bridge ###
