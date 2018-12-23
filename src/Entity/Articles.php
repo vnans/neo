@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ArticlesRepository")
@@ -35,6 +36,13 @@ class Articles
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $image;
+
+   /**
+     *@var string
+     *@Gedmo\Slug(fields={"libelle","taille","collection"})
+     * @ORM\Column(type="string",length=255)
+     */
+    private $slug;
 
     public function getId(): ?int
     {
@@ -85,6 +93,18 @@ class Articles
     public function setImage($image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    public function getSlug(): ?string
+    {
+        return $this->slug;
+    }
+
+    public function setSlug(string $slug): self
+    {
+        $this->slug = $slug;
 
         return $this;
     }

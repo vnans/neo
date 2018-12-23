@@ -64,14 +64,14 @@
     <div class="container-fluid">
 
       <div id="logo" class="pull-left">
-        <h1><a href="index.html"class="scrollto">Neo MultiServices </a></h1>
+       {#  <h1><a href=" {{ path('accueil') }} "class="scrollto">Neo MultiServices </a></h1> #}
         <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="#intro"><img src="img/logo.png" alt="" title="" /></a>-->
+         <a href="{{ path('accueil') }} "><img src=" {{ asset('img/logo.jpg') }} " alt="" title="" /></a>
       </div>  
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-           <li class="menu-active"><a href="index.html">Accueil</a></li>
+           <li class="menu-active"><a href=" {{ path('accueil') }} ">Accueil</a></li>
        <!--    <li><a href="presentation.html">Présentation</a></li> -->
           <li><a href="{{ path('services_index') }}">Produits et Services</a></li>
         {#   <li><a href="reference.html"></a></li> #}

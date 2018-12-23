@@ -3,7 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-//use Gedmo\Mapping\Annotation as Gedmo;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 
 /**
@@ -58,8 +58,10 @@ class Commandes
      */
     private $ladate;
 
-    /**
-     * @ORM\Column(type="string", length=255)
+   /**
+     *@var string
+     *@Gedmo\Slug(fields={"Nomprenoms","tel","taille","couleur","texte"})
+     * @ORM\Column(type="string",length=255)
      */
     private $slug;
 

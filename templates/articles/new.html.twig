@@ -1,11 +1,35 @@
-{% extends 'base.html.twig' %}
+{% extends 'base2.html.twig' %}
 
 {% block title %}New Articles{% endblock %}
 
 {% block body %}
-    <h1>Create new Articles</h1>
+<div id="content-wrapper">
 
-    {{ include('articles/_form.html.twig') }}
+        <div class="container-fluid">
 
-    <a href="{{ path('articles_index') }}">back to list</a>
+          <!-- Breadcrumbs-->
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="#">Tableau de bord</a>
+            </li>
+            <li class="breadcrumb-item active">Articles</li>
+          </ol>
+
+          <!-- Icon Cards-->
+          <div class="row">
+          	<div class="col-md-6 offset-3">
+          		{{ include('articles/_form.html.twig') }}
+          	</div>
+ 		
+          </div>
+
+
+
+
+        </div>
+    </div>	
+
+   
+
+   {#  <a href="{{ path('articles_index') }}">back to list</a> #}
 {% endblock %}

@@ -904,6 +904,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   position: relative;
   height: 360px;
   overflow: hidden;
+
 }
 
 #portfolio .portfolio-item figure {
@@ -928,7 +929,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-align: center;
   width: 36px;
   height: 36px;
-  background: #fff;
+  background: #0000;
   border-radius: 50%;
   transition: 0.2s linear;
 }
@@ -971,7 +972,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: #fff;
   text-align: center;
   padding: 30px;
-  height: 90px;
+  height: 200px;
   border-radius: 0 0 3px 3px;
 }
 
@@ -996,7 +997,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin: 0;
   color: #b8b8b8;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 10px;
   text-transform: uppercase;
 }
 

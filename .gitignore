@@ -6,7 +6,6 @@
 /tests/
 /translations/
 /.htaccess
-/vendor/
 ###< symfony/framework-bundle ###
 
 ###> symfony/phpunit-bridge ###

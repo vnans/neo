@@ -3,9 +3,100 @@
 {% block title %}ImgPrint index{% endblock %}
 
 {% block body %}
-    <h1>ImgPrint index</h1>
+  <main id="main">
 
-    <table class="table">
+   <section id="featured-services">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 box">
+            <i></i>
+          
+          </div>
+
+          <div class="col-lg-4 box box-bg">
+            
+           
+          </div>
+
+          <div class="col-lg-4 box">
+           
+          </div>
+
+        </div>
+      </div>
+    </section><!-- #featured-services -->
+  
+    <!--==========================
+      About Us Section
+    ============================-->
+     <section id="services">
+      <div class="container">
+
+        <header class="section-header wow fadeInUp">
+          <h3>NEO PRINT</h3>
+          <h4>IMPRIMERIE ET INFOGRAPHIE</h4>
+         
+        </header>
+          <div class="row about-cols">
+            <p>Nous vous accompagnons dans toutes votre campagne de publicité sur support. </p>
+
+            
+        </div>
+
+      </div>
+    </section><!-- #services -->
+
+    <!--==========================
+      Services Section
+    ============================-->
+    <section id="services">
+      <div class="container">
+          <div class="row about-cols">
+ {% for img_print in img_prints %}
+        <div class="col-md-4 wow fadeInUp">
+            <div class="about-col">
+              <div class="img">
+                <img src="{{ img_print.image }}" alt="" class="img-fluid">
+                <div class="icon"></div>
+              </div>
+              <h2 class="title"><a href="#">{{ img_print.titre }}</a></h2>
+               <p>
+ 
+              </p>
+            </div>
+          </div>
+            
+        {% else %}
+            <tr>
+                <td colspan="4">Aucune image enregistrée</td>
+            </tr>
+        {% endfor %}
+
+
+
+
+        </div>
+
+
+      </div>
+    </section><!-- #services -->
+
+
+
+      
+
+ 
+
+
+
+
+
+   
+ 
+   
+  </main>
+    {# <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
@@ -33,5 +124,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('img_print_new') }}">Create new</a>
+    <a href="{{ path('img_print_new') }}">Create new</a> #}
 {% endblock %}

@@ -3,12 +3,22 @@
 {% block title %}Services index{% endblock %}
 
 {% block body %}
+<!--==========================
+      Call To Action Section
+    ============================-->
+    <section id="call-to-action" class="wow fadeIn">
+      <div class="container text-center">
+      {#   <h3>Pimp my tee</h3> #}
+        {# <p> Neo multiservices dispose de plusieurs services dont les principaux sont ceux cités ci-dessous . </p> #}
+       {#  <a class="cta-btn" href="#commande">je commande</a> #}
+      </div>
+    </section><!-- #call-to-action -->
  <section id="services">
       <div class="container">
 
         <header class="section-header wow fadeInUp">
           <h3>Services</h3>
-          <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus, ad pro quaestio laboramus. Ei ubique vivendum pro. At ius nisl accusam lorenta zanos paradigno tridexa panatarel.</p>
+         <p> Neo multiservices dispose de plusieurs services dont les principaux sont ceux cités ci-dessous . </p>
         </header>
 
         <div class="row">
@@ -26,7 +36,7 @@
                 <li>{{ service.domaine5 }}</li>
             </ul>
            {# <a href="{{ path('services_show', {'id': service.id}) }}"> <button class="btn btn-warning" >Details</button> </a> #}
-           <a href="{{ path('img_print_index') }}"> <button class="btn btn-warning" >Détails</button> </a>
+           <a href="{{ path('img_clean_index') }}"> <button class="btn btn-warning" >Détails</button> </a>
           {#   <a href="{{ path('services_edit', {'id': service.id}) }}">edit</a> #}
           </div>
 {% else %}

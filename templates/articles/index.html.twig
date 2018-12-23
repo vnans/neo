@@ -11,7 +11,7 @@
       <div class="container text-center">
         <h3>Pimp my tee</h3>
         <p> Vous trouverez ici des idées de design pour vos personnalisations de Tee-shirt, choisissez votre modèle , definissez votre texte à ajouter et envoyé nous votre commande et vous serrez livré !    </p>
-        <a class="cta-btn" href="#commande">je commande</a>
+      {#   <a class="cta-btn" href="#commande">je commande</a> #}
       </div>
     </section><!-- #call-to-action -->
 <!--==========================
@@ -45,14 +45,14 @@
               <figure>
                 <img src=" {{ asset('img/articles/')}}{{ article.image }} " class="img-fluid" alt="">
                 <a href="{{ asset('img/articles/')}}{{ article.image }} " data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+               {#  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a> #}
               </figure>
 
               <div class="portfolio-info">
                 <h4><a href="#">{{ article.libelle }}</a></h4>
-                <p>{{ article.taille }}</p>
-                <p>{{article.collection }}  </p>
-                  <p> <a href="{{ path('commandes_new', {'id': article.id}) }}">  <button class="btn btn-default" > commander </button> </a> 
+                <p> <b>Taille : {{ article.taille }}</b> </p>
+                <p> <b>Collection : {{article.collection }}</b>  </p>
+                  <p> <a href="{{ path('commandes_new', {'id': article.id}) }}">  <button class="btn btn-warning" > commander </button> </a> 
                   </p>
               </div>
             </div>
