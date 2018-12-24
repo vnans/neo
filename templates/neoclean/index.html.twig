@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Neoclean index{% endblock %}
+
+{% block body %}
+    <h1>Neoclean index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Image</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for neoclean in neocleans %}
+            <tr>
+                <td>{{ neoclean.id }}</td>
+                <td>{{ neoclean.titre }}</td>
+                <td>{{ neoclean.image }}</td>
+                <td>
+                    <a href="{{ path('neoclean_show', {'id': neoclean.id}) }}">show</a>
+                    <a href="{{ path('neoclean_edit', {'id': neoclean.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('neoclean_new') }}">Create new</a>
+{% endblock %}

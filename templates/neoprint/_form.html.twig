@@ -1,0 +1,24 @@
+{# {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }} #}
+{{ form_start(form) }} 
+
+          
+              <div class="form-group">
+              <div class="form-label-group">
+                {{ form_widget(form.titre,{ 'attr': {'class':'form-control input-text','placeholder':'Collection,','data-rule':'minlen:4' ,'autofocus':'autofocus'}}) }}
+                <label for="inputEmail">Titre</label>
+              </div>
+            	</div>
+            <div class="form-group">
+              <div class="form-label-group">
+                {{ form_widget(form.image) }}
+             
+              </div>
+            </div>  
+        
+          {#   <a class="btn btn-primary btn-block" href="login.html">Register</a> #}
+
+    <button class="btn btn-primary btn-block">{{ button_label|default('Enregistrer') }}</button>
+{{ form_end(form) }}

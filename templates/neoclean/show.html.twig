@@ -1,0 +1,30 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}Neoclean{% endblock %}
+
+{% block body %}
+    <h1>Neoclean</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ neoclean.id }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ neoclean.titre }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td>{{ neoclean.image }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('neoclean_index') }}">back to list</a>
+
+    <a href="{{ path('neoclean_edit', {'id': neoclean.id}) }}">edit</a>
+
+    {{ include('neoclean/_delete_form.html.twig') }}
+{% endblock %}

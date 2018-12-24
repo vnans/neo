@@ -1,9 +1,8 @@
 {% extends 'base2.html.twig' %}
 
-{% block title %}New Services{% endblock %}
+{% block title %}New Neoprint{% endblock %}
 
 {% block body %}
-
 <div id="content-wrapper">
 
         <div class="container-fluid">
@@ -13,13 +12,13 @@
             <li class="breadcrumb-item">
               <a href="#">Tableau de bord</a>
             </li>
-            <li class="breadcrumb-item active">Creer nouveau Services</li>
+            <li class="breadcrumb-item active">Ajout nouvelle image Neoprint</li>
           </ol>
 
           <!-- Icon Cards-->
           <div class="row">
           	<div class="col-md-6 offset-3">
-          		 {{ include('services/_form.html.twig') }}
+          		{{ include('neoprint/_form.html.twig') }}
 
           	</div>
  		
@@ -29,13 +28,10 @@
 
 
         </div>
-    </div>	
+    </div>
+   {#  <h1>Create new Neoprint</h1>
 
+    {{ include('neoprint/_form.html.twig') }}
 
-
-   {#  <h1>Create new Services</h1>
-
-    {{ include('services/_form.html.twig') }}
-
-    <a href="{{ path('services_index') }}">back to list</a> #}
+    <a href="{{ path('neoprint_index') }}">back to list</a> #}
 {% endblock %}

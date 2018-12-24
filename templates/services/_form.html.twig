@@ -1,4 +1,57 @@
-{{ form_start(form) }}
+{# {{ form_start(form) }}
     {{ form_widget(form) }}
     <button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}  #}
+
+{{ form_start(form) }}
+
+          
+              <div class="form-group">
+              <div class="form-label-group">
+                {{ form_widget(form.libelle,{ 'attr': {'class':'form-control input-text','placeholder':'Collection,','data-rule':'minlen:4' ,'autofocus':'autofocus'}}) }}
+                <label for="inputEmail">libelle</label>
+              </div>
+            	</div>
+            	 <div class="form-group">
+              <div class="form-label-group">
+                {{ form_widget(form.description,{ 'attr': {'class':'form-control input-text','placeholder':'Collection,','data-rule':'minlen:4' ,'autofocus':'autofocus'}}) }}
+                <label for="inputEmail">description</label>
+              </div>
+            	</div>    
+        
+            <div class="form-group">
+              <div class="form-label-group">
+                {{ form_widget(form.domaine1,{ 'attr': {'class':'form-control input-text','placeholder':'Collection,','data-rule':'minlen:4' ,'autofocus':'autofocus'}}) }}
+                <label for="inputEmail">domaine1</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-label-group">
+                {{ form_widget(form.domaine2,{ 'attr': {'class':'form-control input-text','placeholder':'Collection,','data-rule':'minlen:4' ,'autofocus':'autofocus'}}) }}
+                <label for="inputEmail">domaine2</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-label-group">
+                {{ form_widget(form.domaine3,{ 'attr': {'class':'form-control input-text','placeholder':'Collection,','data-rule':'minlen:4' ,'autofocus':'autofocus'}}) }}
+                <label for="inputEmail">domaine3</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-label-group">
+                {{ form_widget(form.domaine4,{ 'attr': {'class':'form-control input-text','placeholder':'Collection,','data-rule':'minlen:4' ,'autofocus':'autofocus'}}) }}
+                <label for="inputEmail">domaine4</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-label-group">
+                {{ form_widget(form.domaine5,{ 'attr': {'class':'form-control input-text','placeholder':'Collection,','data-rule':'minlen:4' ,'autofocus':'autofocus'}}) }}
+                <label for="inputEmail">domaine5</label>
+              </div>
+            </div>
+            
+           
+          {#   <a class="btn btn-primary btn-block" href="login.html">Register</a> #}
+
+    <button class="btn btn-primary btn-block">{{ button_label|default('Enregistrer') }}</button>
 {{ form_end(form) }}

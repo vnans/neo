@@ -23,6 +23,13 @@ class ArticlesController extends AbstractController
     {
         return $this->render('articles/index.html.twig', ['articles' => $articlesRepository->findAll()]);
     }
+/**
+     * @Route("/index2", name="articles_index2", methods="GET")
+     */
+    public function index2(ArticlesRepository $articlesRepository): Response
+    {
+        return $this->render('articles/index2.html.twig', ['articles' => $articlesRepository->findAll()]);
+    }
 
     /**
      * @Route("/new", name="articles_new", methods="GET|POST")

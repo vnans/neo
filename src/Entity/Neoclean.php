@@ -5,9 +5,9 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\ImgCleanRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\NeocleanRepository")
  */
-class ImgClean
+class Neoclean
 {
     /**
      * @ORM\Id()
@@ -24,7 +24,7 @@ class ImgClean
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $img;
+    private $image;
 
     public function getId(): ?int
     {
@@ -43,14 +43,14 @@ class ImgClean
         return $this;
     }
 
-    public function getImg(): ?string
+    public function getImage(): ?string
     {
-        return $this->img;
+        return $this->image;
     }
 
-    public function setImg(string $img): self
+    public function setImage(string $image): self
     {
-        $this->img = $img;
+        $this->image = $image;
 
         return $this;
     }

@@ -1,0 +1,84 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}Articles index{% endblock %}
+
+{% block body %}
+
+<div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>Libelle</th>
+	                <th>Taille</th> 
+	                <th>Collection</th>
+	               
+	                <th>actions</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                     <th>Libelle</th>
+	                <th>Taille</th> 
+	                <th>Collection</th>
+	              
+	                <th>actions</th>
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                  	{% for article in articles %}
+            	<tr>
+                
+                <td>{{ article.libelle }}</td>
+                <td>{{ article.taille }}</td>
+                <td>{{ article.collection }}</td>
+              
+                <td>
+                    <a href="{{ path('articles_show', {'id': article.id}) }}">Détail</a>
+                    <a href="{{ path('articles_edit', {'id': article.id}) }}">Modifier</a>
+                </td>
+            	</tr>
+        {% else %}
+            <tr>
+                <td colspan="6">Aucun enregistrement trouvé </td>
+            </tr>
+        {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+{#     <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Libelle</th>
+                <th>Taille</th> 
+                <th>Collection</th>
+                <th>Image</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for article in articles %}
+            <tr>
+                <td>{{ article.id }}</td>
+                <td>{{ article.libelle }}</td>
+                <td>{{ article.taille }}</td>
+                <td>{{ article.collection }}</td>
+                <td>{{ article.image }}</td>
+                <td>
+                    <a href="{{ path('articles_show', {'id': article.id}) }}">show</a>
+                    <a href="{{ path('articles_edit', {'id': article.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table> #}
+
+{#     <a href="{{ path('articles_new') }}">Create new</a>  #}
+{% endblock %}

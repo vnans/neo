@@ -5,9 +5,9 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\ImgPrintRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\NeoprintRepository")
  */
-class ImgPrint
+class Neoprint
 {
     /**
      * @ORM\Id()

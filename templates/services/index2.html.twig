@@ -1,0 +1,69 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}Services index{% endblock %}
+
+{% block body %}
+
+<div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                    <th>Libelle</th>
+	                <th>Description</th> 
+	                <th>Domaine 1</th>
+	                <th>Domaine 2</th>
+	                <th>Domaine 3</th> 
+	                <th>Domaine 4</th>
+	                <th>Domaine 5</th>
+	               
+	                <th>actions</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                    <th>Libelle</th>
+	                <th>Description</th> 
+	                <th>Domaine 1</th>
+	                <th>Domaine 2</th>
+	                <th>Domaine 3</th> 
+	                <th>Domaine 4</th>
+	                <th>Domaine 5</th>
+	              
+	                <th>actions</th>
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                  	{% for service in services %}
+
+            	<tr>
+                
+                <td>{{ service.libelle }}</td>
+                <td>{{ service.description }}</td>
+                <td>{{ service.domaine1 }}</td>
+                <td>{{ service.domaine2 }}</td>
+                <td>{{ service.domaine3 }}</td>
+                <td>{{ service.domaine4 }}</td>
+                <td>{{ service.domaine5 }}</td>
+              
+                <td>
+                    <a href="{{ path('services_show', {'id': service.id}) }}">Détail</a>
+                    <a href="{{ path('services_edit', {'id': service.id}) }}">Modifier</a>
+                </td>
+            	</tr>
+        {% else %}
+            <tr>
+                <td colspan="6">Aucun enregistrement trouvé </td>
+            </tr>
+        {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+    </div>
+
+ <!-- #services -->
+    
+
+
+  {#   <a href="{{ path('services_new') }}">creer un service</a> #}
+{% endblock %}

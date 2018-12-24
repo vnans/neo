@@ -1,0 +1,13 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}Edit Neoclean{% endblock %}
+
+{% block body %}
+    <h1>Edit Neoclean</h1>
+
+    {{ include('neoclean/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('neoclean_index') }}">back to list</a>
+
+    {{ include('neoclean/_delete_form.html.twig') }}
+{% endblock %}

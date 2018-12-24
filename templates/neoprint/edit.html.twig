@@ -1,0 +1,13 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}Edit Neoprint{% endblock %}
+
+{% block body %}
+    <h1>Edit Neoprint</h1>
+
+    {{ include('neoprint/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('neoprint_index') }}">back to list</a>
+
+    {{ include('neoprint/_delete_form.html.twig') }}
+{% endblock %}
