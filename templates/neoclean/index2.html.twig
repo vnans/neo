@@ -1,0 +1,48 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}Neoclean liste {% endblock %}
+
+{% block body %}
+<div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Titre</th>
+                  <th>Image</th>
+                  <th>actions</th>
+                </tr>
+                  </thead>
+                  <tfoot>
+                <tr>
+                  <th>Id</th>
+                  <th>Titre</th>
+                  <th>Image</th>
+                  <th>actions</th>
+                </tr>
+                  </tfoot>
+                  <tbody>
+         {% for neoclean in neocleans %}
+            <tr>
+                <td>{{ neoclean.id }}</td>
+                <td>{{ neoclean.titre }}</td>
+                <td>{{ neoclean.image }}</td>
+                <td>
+                    <a href="{{ path('neoclean_show', {'id': neoclean.id}) }}">Détail</a>
+                    <a href="{{ path('neoclean_edit', {'id': neoclean.id}) }}">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">Aucun enregistrement trouvé</td>
+            </tr>
+        {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+    </div>
+
+
+  
+{% endblock  %} 

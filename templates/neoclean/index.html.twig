@@ -1,9 +1,102 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Neoclean index{% endblock %}
+{% block title %}Neoclean liste{% endblock %}
 
 {% block body %}
-    <h1>Neoclean index</h1>
+
+ <main id="main">
+
+     <section id="featured-services">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-lg-4 box">
+              <i></i>
+            
+            </div>
+
+            <div class="col-lg-4 box box-bg">
+              
+             
+            </div>
+
+            <div class="col-lg-4 box">
+             
+            </div>
+
+          </div>
+        </div>
+      </section><!-- #featured-services -->
+    
+      <!--==========================
+        About Us Section
+      ============================-->
+       <section id="services">
+        <div class="container">
+
+          <header class="section-header wow fadeInUp">
+            <h3>NEO CLEAN</h3>
+            <h4>NETTOYAGE BUREAU</h4>
+           
+          </header>
+            <div class="row about-cols">
+              <p>Nous vous accompagnons dans la polotique d'hygiene de votre service . </p>
+
+              
+          </div>
+
+        </div>
+      </section><!-- #services -->
+
+      <!--==========================
+        Services Section
+      ============================-->
+      <section id="services">
+        <div class="container">
+            <div class="row about-cols">
+
+    {% for neoclean in neocleans %}
+         <div class="col-md-3 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="about-col">
+                <div class="img">
+                  <img src="img/{{ neoclean.image }}" alt="" class="img-fluid">
+                  <div class="icon"></div>
+                </div>
+                <h2 class="title"><a href="#">{{ neoclean.titre }}</a></h2>
+                 <p>
+
+                   
+                </p> 
+              </div>
+            </div>   
+        {% else %}
+            <tr>
+                <td colspan="4">Aucun enrégisgtrement trouvé</td>
+            </tr>
+        {% endfor %}
+            
+
+
+       
+          </div>
+
+
+        </div>
+      </section><!-- #services -->
+
+
+
+        
+
+   
+
+
+
+
+
+     
+    </main>    
+    {# <h1>Neoclean index</h1>
 
     <table class="table">
         <thead>
@@ -31,7 +124,7 @@
             </tr>
         {% endfor %}
         </tbody>
-    </table>
+    </table> #}
 
-    <a href="{{ path('neoclean_new') }}">Create new</a>
+   {#  <a href="{{ path('neoclean_new') }}">Create new</a> #}
 {% endblock %}

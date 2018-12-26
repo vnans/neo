@@ -1,9 +1,169 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Neoprint index{% endblock %}
+{% block title %}Neoclean liste{% endblock %}
 
 {% block body %}
-    <h1>Neoprint index</h1>
+
+ <main id="main">
+
+     <section id="featured-services">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-lg-4 box">
+              <i></i>
+            
+            </div>
+
+            <div class="col-lg-4 box box-bg">
+              
+             
+            </div>
+
+            <div class="col-lg-4 box">
+             
+            </div>
+
+          </div>
+        </div>
+      </section><!-- #featured-services -->
+    
+      <!--==========================
+        About Us Section
+      ============================-->
+       <section id="services">
+        <div class="container">
+
+          <header class="section-header wow fadeInUp">
+          <h3>NEO PRINT</h3>
+          <h4>IMPRIMERIE ET INFOGRAPHIE</h4>
+         
+        </header>
+          <div class="row about-cols">
+            <p>Nous vous accompagnons dans toutes votre campagne de publicité sur support. </p>
+
+            
+        </div>
+
+        </div>
+      </section><!-- #services -->
+
+      <!--==========================
+        Services Section
+      ============================-->
+      <section id="services">
+        <div class="container">
+            <div class="row about-cols">
+
+    {% for neoprint in neoprints %}
+         <div class="col-md-3 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="about-col">
+                <div class="img">
+                  <img src="img/{{ neoprint.image }}" alt="" class="img-fluid">
+                  <div class="icon"></div>
+                </div>
+                <h2 class="title"><a href="#">{{ neoprint.titre }}</a></h2>
+                 <p>
+
+                   
+                </p> 
+              </div>
+            </div>   
+        {% else %}
+            <tr>
+                <td colspan="4">Aucun enrégisgtrement trouvé</td>
+            </tr>
+        {% endfor %}
+            
+
+
+       
+          </div>
+
+
+        </div>
+      </section><!-- #services -->
+
+
+
+        
+
+   
+
+
+
+
+
+     
+    </main>    
+    {# <h1>Neoclean index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Image</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for neoclean in neocleans %}
+            <tr>
+                <td>{{ neoclean.id }}</td>
+                <td>{{ neoclean.titre }}</td>
+                <td>{{ neoclean.image }}</td>
+                <td>
+                    <a href="{{ path('neoclean_show', {'id': neoclean.id}) }}">show</a>
+                    <a href="{{ path('neoclean_edit', {'id': neoclean.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table> #}
+
+   {#  <a href="{{ path('neoclean_new') }}">Create new</a> #}
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{#     <h1>Neoprint index</h1>
 
     <table class="table">
         <thead>
@@ -33,5 +193,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('neoprint_new') }}">Create new</a>
-{% endblock %}
+    <a href="{{ path('neoprint_new') }}">Create new</a> #}
+

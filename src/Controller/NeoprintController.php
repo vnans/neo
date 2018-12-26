@@ -22,6 +22,13 @@ class NeoprintController extends AbstractController
     {
         return $this->render('neoprint/index.html.twig', ['neoprints' => $neoprintRepository->findAll()]);
     }
+    /**
+     * @Route("/index2", name="neoprint_index2", methods="GET")
+     */
+    public function index2(NeoprintRepository $neoprintRepository): Response
+    {
+        return $this->render('neoprint/index2.html.twig', ['neoprints' => $neoprintRepository->findAll()]);
+    }
 
     /**
      * @Route("/new", name="neoprint_new", methods="GET|POST")

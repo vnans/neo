@@ -22,6 +22,13 @@ class NeocleanController extends AbstractController
     {
         return $this->render('neoclean/index.html.twig', ['neocleans' => $neocleanRepository->findAll()]);
     }
+     /**
+     * @Route("/index2", name="neoclean_index2", methods="GET")
+     */
+    public function index2(NeocleanRepository $neocleanRepository): Response
+    {
+        return $this->render('neoclean/index2.html.twig', ['neocleans' => $neocleanRepository->findAll()]);
+    }
 
     /**
      * @Route("/new", name="neoclean_new", methods="GET|POST")
