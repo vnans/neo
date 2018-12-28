@@ -45,8 +45,8 @@ class ArticlesController extends AbstractController
             $fileName = $this->generateUniqueFileName().'.'.$file->guessExtension();
             // moves the file to the directory where brochures are stored
             $file->move($this->getParameter('images_directory'), $fileName);
+            $article->setImage($fileName);
 
-            $article->setImage($fileName); 
             $em = $this->getDoctrine()->getManager();
             $em->persist($article);
             $em->flush();
@@ -77,6 +77,13 @@ class ArticlesController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $file = $article->getImage();
+            $fileName = $this->generateUniqueFileName().'.'.$file->guessExtension();
+            // moves the file to the directory where brochures are stored
+            $file->move($this->getParameter('images_directory'), $fileName);
+            $article->setImage($fileName);
+            
+            
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('articles_index', ['id' => $article->getId()]);

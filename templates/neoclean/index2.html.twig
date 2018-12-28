@@ -10,7 +10,7 @@
                 <tr>
                   <th>Id</th>
                   <th>Titre</th>
-                  <th>Image</th>
+               
                   <th>actions</th>
                 </tr>
                   </thead>
@@ -18,7 +18,7 @@
                 <tr>
                   <th>Id</th>
                   <th>Titre</th>
-                  <th>Image</th>
+              
                   <th>actions</th>
                 </tr>
                   </tfoot>
@@ -27,9 +27,9 @@
             <tr>
                 <td>{{ neoclean.id }}</td>
                 <td>{{ neoclean.titre }}</td>
-                <td>{{ neoclean.image }}</td>
+             
                 <td>
-                    <a href="{{ path('neoclean_show', {'id': neoclean.id}) }}">Détail</a>
+                    {# <a href="{{ path('neoclean_show', {'id': neoclean.id}) }}">Détail</a> #}
                     <a href="{{ path('neoclean_edit', {'id': neoclean.id}) }}">Modifier</a>
                 </td>
             </tr>

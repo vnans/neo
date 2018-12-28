@@ -38,10 +38,10 @@ class Articles
     private $image;
 
    /**
-     *@var string
-     *@Gedmo\Slug(fields={"libelle","taille","collection"})
-     * @ORM\Column(type="string",length=255)
-     */
+    *@var string
+    *@Gedmo\Slug(fields={"libelle","taille","collection"})
+    * @ORM\Column(type="string",length=255)
+    */
     private $slug;
 
     public function getId(): ?int

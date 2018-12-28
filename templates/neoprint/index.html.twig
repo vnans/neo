@@ -6,7 +6,7 @@
 
  <main id="main">
 
-
+  
     
       <!--==========================
         About Us Section
@@ -39,7 +39,8 @@
          <div class="col-md-3 wow fadeInUp" data-wow-delay="0.1s">
               <div class="about-col">
                 <div class="img">
-                  <img src="img/{{ neoprint.image }}" alt="" class="img-fluid">
+                  <img src="{{ asset('/img/articles/') }}{{ neoprint.image }} " alt="{{ asset('public/img/articles/') }}{{ neoprint.image }}">
+                 {#  <img src="img/{{ neoprint.image }}" alt="" class="img-fluid"> #}
                   <div class="icon"></div>
                 </div>
                 <h2 class="title"><a href="#">{{ neoprint.titre }}</a></h2>

@@ -3,11 +3,25 @@
 {% block title %}Edit Neoprint{% endblock %}
 
 {% block body %}
-    <h1>Edit Neoprint</h1>
+   
+   {#  {{ include('neoprint/_form.html.twig', {'button_label': 'Update'}) }}
 
-    {{ include('neoprint/_form.html.twig', {'button_label': 'Update'}) }}
+    <a href="{{ path('neoprint_index') }}">back to list</a>#}
 
-    <a href="{{ path('neoprint_index') }}">back to list</a>
-
-    {{ include('neoprint/_delete_form.html.twig') }}
+    
+    
+ 
+    <div class="row">
+		
+   	<div class="col-md-6">
+        <img src=" {{ asset('img/articles/')}}{{ neoprint.image }} " class="img-fluid" alt="">  
+        
+ 		
+      </div>
+      <div class="col-md-6">
+       {{ include('neoprint/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+		<a href="{{ path('neoprint_index') }}"> <button class="btn btn-default btn-block " > Rétour</button></a>
+		{{ include('neoprint/_delete_form.html.twig') }} 
+      </div>
+   </div>
 {% endblock %}
