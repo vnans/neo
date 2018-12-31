@@ -36,15 +36,16 @@
               <div class="validation"></div>
             </div>
             
-            <div class="form-group">
-             {{ form_widget(form.article , { 'attr': {'class':'form-control input-text', 'value': 'article.slug' }}) }} 
+            
 
+            <div class="form-group">
+            	 {{ form_widget(form.commentaire , { 'attr': {'class':'form-control input-text', 'value': 'article.slug','rows':'5', 'data-rule':'required' ,'data-msg':'Please write something for us', 'placeholder':'Commentaire , exemple : je veux avoir un kepi qui à le même design que mon t-shirt ... ' }}) }} 
               
               <div class="validation"></div>
             </div>
-
             <div class="form-group">
-            	 {{ form_widget(form.commentaire , { 'attr': {'class':'form-control input-text', 'value': 'article.slug','rows':'5', 'data-rule':'required' ,'data-msg':'Please write something for us', 'placeholder':'Commentaire' }}) }} 
+             {{ form_widget(form.article , {'attr': {'value': article.slug ,'class':'form-control input-text', 'readonly':'readonly' } }) }} 
+
               
               <div class="validation"></div>
             </div>
