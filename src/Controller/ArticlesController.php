@@ -82,8 +82,8 @@ class ArticlesController extends AbstractController
             // moves the file to the directory where brochures are stored
             $file->move($this->getParameter('images_directory'), $fileName);
             $article->setImage($fileName);
-            
-            
+
+
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('articles_index', ['id' => $article->getId()]);

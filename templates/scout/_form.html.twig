@@ -1,0 +1,129 @@
+{{ form_start(form) }}
+<div class="row">
+  <div class="col-lg-12">
+    <div class="p-5">
+
+          <div class="form-group">
+                {{ form_widget(form.nomprenoms, {'attr':{ 'class':'form-control form-control-user','placeholder':'NOM ET PRENOMS'}} )  }}
+            </div>
+      <div class="form-group">
+          <label for=""> DATE DE NAISSANCE :  </label>
+        {{ form_widget(form.datenaiss, {'attr':{ }} ) }}
+      </div>
+      <div class="form-group">
+
+        {{ form_widget(form.lieunaiss ,{'attr':{ 'class':'form-control user','placeholder':'LIEU DE NAISSANCE'}} ) }}
+      </div>
+      <div class="form-group">
+        {{ form_widget(form.nationalite ,{'attr':{ 'class':'form-control user','placeholder':'NATIONALITE'}} ) }}
+      </div>
+      <div class="form-group">
+        {{ form_widget(form.tel ,{'attr':{ 'class':'form-control user','placeholder':'NUMERO DE TELEPHONE'}} ) }}
+      </div>
+      <div class="form-group">
+        {{ form_widget(form.boitepostal ,{'attr':{ 'class':'form-control user','placeholder':'BOITE POSTALE'}} ) }}
+      </div>
+      <div class="form-group">
+        {{ form_widget(form.paroisse,{'attr':{ 'class':'form-control user','placeholder':'PAROISSE'}} ) }}
+      </div>
+      <div class="form-group">
+        <label for="">BAPTISE ? :</label>
+        {{ form_widget(form.baptise,{'attr':{}} )}}
+      </div>
+      <div class="form-group">
+        {{ form_widget(form.baptisepar ,{'attr':{ 'class':'form-control user','placeholder':' BATISE PAR :'}} ) }}
+      </div>
+      <div class="form-group">
+        <label for="">DATE DU BAPTEME :</label>
+      {{ form_widget(form.datebapteme) }}
+      </div>
+      <div class="form-group">
+        {{ form_widget(form.lieubapteme ,{'attr':{ 'class':'form-control user','placeholder':'LIEU DE BAPTEME'}} ) }}
+      </div>
+      <div class="form-group">
+        {{ form_widget(form.fonctionparoisse ,{'attr':{ 'class':'form-control user','placeholder':'FONCTION OCCUPEE SUR LA PAROISSE '}} ) }}
+      </div>
+      <div class="form-group">
+        <label for="">DATE D'ENTREE DANS LE SCOUTISME : </label>
+        {{ form_widget(form.datescout) }}
+      </div>
+      <div class="form-group">
+        <label for="">DATE DE LA PROMESSE SCOUT : </label>
+        {{ form_widget(form.datepromesse) }}
+      </div>
+      <div class="form-group">
+        {{ form_widget(form.lieupromesse,{'attr':{ 'class':'form-control user','placeholder':'LIEU DE LA PROMESSE'}} ) }}
+      </div>
+      <div class="form-group">
+        {{ form_widget(form.fctscoutactu ,{'attr':{ 'class':'form-control user','placeholder':'FONCTION SCOUTE ACTUELLE'}} ) }}
+      </div>
+      <div class="form-group">
+        <label for="">DATE DE NOMINATION : </label>
+        {{ form_widget(form.datenomi) }}
+      </div>
+      <div class="form-group">
+        {{ form_widget(form.stage1 ,{'attr':{ 'class':'form-control user','placeholder':'STAGE DE FORMATION,  EX: Badge de bois'}} ) }}
+      </div>
+      <div class="form-group">
+        <label for="">DATE DU STAGE :</label>
+        {{ form_widget(form.stage1date) }}
+      </div>
+      <div class="form-group">
+        {{ form_widget(form.stage1lieu ,{'attr':{ 'class':'form-control user','placeholder':'LIEU DU STAGE DE FORMATION'}} ) }}
+      </div>
+      <div class="form-group">
+        {{ form_widget(form.stage2,{'attr':{ 'class':'form-control user','placeholder':'STAGE DE FORMATION,  EX: PRE-BADGE'}} ) }}
+      </div>
+      <div class="form-group">
+        <label for="">DATE DU STAGE </label>
+        {{ form_widget(form.stage2date) }}
+      </div>
+      <div class="form-group">
+        {{ form_widget(form.stage2lieu ,{'attr':{ 'class':'form-control user','placeholder':'LIEU DU  STAGE DE FORMATION'}} ) }}
+      </div>
+      <div class="form-group">
+        {{ form_widget(form.stage3 ,{'attr':{ 'class':'form-control user','placeholder':' STAGE DE FORMATION, ex :CAMP ECOLE PREPARATOIRE '}} ) }}
+      </div>
+      <div class="form-group">
+        <label for="">DATE DU STAGE </label>
+        {{ form_widget(form.stage3date) }}
+      </div>
+      <div class="form-group">
+        {{ form_widget(form.stage3lieu ,{'attr':{ 'class':'form-control user','placeholder':'LIEU DU STAGE DE FORMATION'}} ) }}
+      </div>
+      <div class="form-group">
+        {{ form_widget(form.stageinter1 ,{'attr':{ 'class':'form-control user','placeholder':'STAGE DE FORMATION INTERNATIONAL EX: FORMATION 3 BUCHETTES'}} ) }}
+      </div>
+      <div class="form-group">
+        <label for="">DATE DE LA FORMATION</label>
+        {{ form_widget(form.stageinter1date) }}
+      </div>
+      <div class="form-group">
+        {{ form_widget(form.stageinter1lieu,{'attr':{ 'class':'form-control user','placeholder':' LIEU DU STAGE DE FORMATION'}} )}}
+      </div>
+      <div class="form-group">
+        {{ form_widget(form.stageinter2,{'attr':{ 'class':'form-control user','placeholder':'STAGE DE FORMATION INTERNATIONAL,  EX: FORMATION 4 BUCHETTES'}} )}}
+      </div>
+      <div class="form-group">
+        <label for="">DATE DE LA FORMATION :</label>
+        {{ form_widget(form.stageinter2date) }}
+      </div>
+      <div class="form-group">
+        {{ form_widget(form.stageinter2lieu ,{'attr':{ 'class':'form-control user','placeholder':' LIEU DU STAGE DE FORMATION'}} )}}
+      </div>
+      <div class="form-group">
+        {{ form_widget(form.profession ,{'attr':{ 'class':'form-control user','placeholder':'PROFESSION'}} ) }}
+      </div>
+      <div class="form-group">
+        <label for="">CHOISIR UN PHOTO EN TENUE SCOUT :</label>
+        {{ form_widget(form.img) }}
+      </div>
+
+          <button class="btn btn-primary btn-user btn-block">{{ button_label|default('ENREGISTRER') }}</button>
+
+    </div>
+  </div>
+
+</div>
+
+{{ form_end(form) }}

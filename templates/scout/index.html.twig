@@ -1,0 +1,164 @@
+{% extends 'base3.html.twig' %}
+
+{% block title %}Scout index{% endblock %}
+
+{% block body %}
+    <h1>Scout base</h1>*
+    <!-- Begin Page Content -->
+<div class="container-fluid">
+
+  <!-- Page Heading -->
+  <h1 class="h3 mb-2 text-gray-800"></h1>
+
+  <!-- DataTales Example -->
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary"> BASE DE DONNEE  </h6>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+          <thead>
+            <tr>
+
+                <th>Nom et prenoms</th>
+                <th>Date de naissance</th>
+                <th>Lieu de naissance</th>
+                <th>Nationalite</th>
+                <th>Telephone</th>
+                <th>Boitepostal</th>
+                <th>Paroisse</th>
+                <th>Baptise</th>
+                <th>Baptise par</th>
+                <th>Date du bapteme</th>
+                <th>Lieu du bapteme</th>
+                <th>Fonction sur paroisse</th>
+                <th>Date entree scout</th>
+                <th>Date de la promesse</th>
+                <th>Lieu de la promesse</th>
+                <th>Fontion scout actuelle</th>
+                <th>Date de nomination</th>
+                <th>Stage 1</th>
+                <th>Stage 1 date</th>
+                <th>Stage 1 lieu</th>
+                <th>Stage 2</th>
+                <th>Stage 2 date</th>
+                <th>Stage 2 lieu</th>
+                <th>Stage 3</th>
+                <th>Stage 3 date</th>
+                <th>Stage 3 lieu</th>
+                <th>Stage inter 1</th>
+                <th>Stage inter 1 date</th>
+                <th>Stage inter 1 lieu</th>
+                <th>Stage inter 2</th>
+                <th>Stage inter 2 date</th>
+                <th>Stage inter2 lieu</th>
+                <th>Profession</th>
+                <th>Photo</th>
+                <th>actions</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+
+                <th>Nom et prenoms</th>
+                <th>Date de naissance</th>
+                <th>Lieu de naissance</th>
+                <th>Nationalite</th>
+                <th>Telephone</th>
+                <th>Boitepostal</th>
+                <th>Paroisse</th>
+                <th>Baptise</th>
+                <th>Baptise par</th>
+                <th>Date du bapteme</th>
+                <th>Lieu du bapteme</th>
+                <th>Fonction sur paroisse</th>
+                <th>Date entree scout</th>
+                <th>Date de la promesse</th>
+                <th>Lieu de la promesse</th>
+                <th>Fontion scout actuelle</th>
+                <th>Date de nomination</th>
+                <th>Stage 1</th>
+                <th>Stage 1 date</th>
+                <th>Stage 1 lieu</th>
+                <th>Stage 2</th>
+                <th>Stage 2 date</th>
+                <th>Stage 2 lieu</th>
+                <th>Stage 3</th>
+                <th>Stage 3 date</th>
+                <th>Stage 3 lieu</th>
+                <th>Stage inter 1</th>
+                <th>Stage inter 1 date</th>
+                <th>Stage inter 1 lieu</th>
+                <th>Stage inter 2</th>
+                <th>Stage inter 2 date</th>
+                <th>Stage inter2 lieu</th>
+                <th>Profession</th>
+                <th>Photo</th>
+                <th>actions</th>
+            </tr>
+          </tfoot>
+          <tbody>
+            {% for scout in scouts %}
+                <tr>
+                    <td>{{ scout.nomprenoms }}</td>
+                    <td>{{ scout.datenaiss ? scout.datenaiss|date('Y-m-d H:i:s') : '' }}</td>
+                    <td>{{ scout.lieunaiss }}</td>
+                    <td>{{ scout.nationalite }}</td>
+                    <td>{{ scout.tel }}</td>
+                    <td>{{ scout.boitepostal }}</td>
+                    <td>{{ scout.paroisse }}</td>
+                    <td>{{ scout.baptise ? 'Yes' : 'No' }}</td>
+                    <td>{{ scout.baptisepar }}</td>
+                    <td>{{ scout.datebapteme ? scout.datebapteme|date('Y-m-d H:i:s') : '' }}</td>
+                    <td>{{ scout.lieubapteme }}</td>
+                    <td>{{ scout.fonctionparoisse }}</td>
+                    <td>{{ scout.datescout ? scout.datescout|date('Y-m-d H:i:s') : '' }}</td>
+                    <td>{{ scout.datepromesse ? scout.datepromesse|date('Y-m-d H:i:s') : '' }}</td>
+                    <td>{{ scout.lieupromesse }}</td>
+                    <td>{{ scout.fctscoutactu }}</td>
+                    <td>{{ scout.datenomi ? scout.datenomi|date('Y-m-d H:i:s') : '' }}</td>
+                    <td>{{ scout.stage1 }}</td>
+                    <td>{{ scout.stage1date ? scout.stage1date|date('Y-m-d H:i:s') : '' }}</td>
+                    <td>{{ scout.stage1lieu }}</td>
+                    <td>{{ scout.stage2 }}</td>
+                    <td>{{ scout.stage2date ? scout.stage2date|date('Y-m-d H:i:s') : '' }}</td>
+                    <td>{{ scout.stage2lieu }}</td>
+                    <td>{{ scout.stage3 }}</td>
+                    <td>{{ scout.stage3date ? scout.stage3date|date('Y-m-d H:i:s') : '' }}</td>
+                    <td>{{ scout.stage3lieu }}</td>
+                    <td>{{ scout.stageinter1 }}</td>
+                    <td>{{ scout.stageinter1date ? scout.stageinter1date|date('Y-m-d H:i:s') : '' }}</td>
+                    <td>{{ scout.stageinter1lieu }}</td>
+                    <td>{{ scout.stageinter2 }}</td>
+                    <td>{{ scout.stageinter2date ? scout.stageinter2date|date('Y-m-d H:i:s') : '' }}</td>
+                    <td>{{ scout.stageinter2lieu }}</td>
+                    <td>{{ scout.profession }}</td>
+                    <td>{{ scout.img }}</td>
+                    <td>
+                        <a href="{{ path('scout_show', {'id': scout.id}) }}">DETAILS</a>
+                        <a href="{{ path('scout_edit', {'id': scout.id}) }}">MODIFIER</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="36">no records found</td>
+                </tr>
+            {% endfor %}
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- /.container-fluid -->
+
+</div>
+<!-- End of Main Content -->
+
+
+
+    <a href="{{ path('scout_new') }}">NOUVEAU </a>
+{% endblock %}

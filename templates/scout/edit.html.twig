@@ -1,0 +1,13 @@
+{% extends 'base3.html.twig' %}
+
+{% block title %}Edit Scout{% endblock %}
+
+{% block body %}
+    <h1>Modifier les infos Scout</h1>
+
+    {{ include('scout/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('scout_index') }}">Rétouner à la liste</a>
+
+    {{ include('scout/_delete_form.html.twig') }}
+{% endblock %}
