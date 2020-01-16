@@ -2,9 +2,8 @@ dev:
     scheme: ftp
     host: ftp.neo-multiservices.com
     port: 21
-    user: neo-m1030189 
-    pass: ZSy8tE54 
+    user: neo-m1274294
+    pass: W1t4b4N6K7K 
     check: true
     path:
         remote: /
-

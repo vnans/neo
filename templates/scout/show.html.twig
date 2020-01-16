@@ -3,156 +3,178 @@
 {% block title %}Scout{% endblock %}
 
 {% block body %}
-    <h1>Scout</h1>
 
+<div class="row">
+  <div class="col-lg-8">
     <table class="table">
         <tbody>
+
             <tr>
-                <th>Id</th>
-                <td>{{ scout.id }}</td>
-            </tr>
-            <tr>
-                <th>Nomprenoms</th>
+                <th><b>Nom et prénoms :</b> </th>
                 <td>{{ scout.nomprenoms }}</td>
             </tr>
             <tr>
-                <th>Datenaiss</th>
-                <td>{{ scout.datenaiss ? scout.datenaiss|date('Y-m-d H:i:s') : '' }}</td>
+                <th> <b>Date de naissance</b> </th>
+                <td>{{ scout.datenaiss ? scout.datenaiss|date('d-m-Y') : '' }}</td>
             </tr>
             <tr>
-                <th>Lieunaiss</th>
+                <th> <b>Lieu de naissance :</b></th>
                 <td>{{ scout.lieunaiss }}</td>
             </tr>
             <tr>
-                <th>Nationalite</th>
+                <th> <b>Nationalité</b> </th>
                 <td>{{ scout.nationalite }}</td>
             </tr>
             <tr>
-                <th>Tel</th>
+                <th> <b>Téléphone</b></th>
                 <td>{{ scout.tel }}</td>
             </tr>
             <tr>
-                <th>Boitepostal</th>
+                <th>Boite postale</th>
                 <td>{{ scout.boitepostal }}</td>
             </tr>
             <tr>
-                <th>Paroisse</th>
+                <th> <b>Paroisse</b></th>
                 <td>{{ scout.paroisse }}</td>
             </tr>
             <tr>
-                <th>Baptise</th>
+                <th> <b>Baptisé :</b> </th>
                 <td>{{ scout.baptise ? 'Yes' : 'No' }}</td>
             </tr>
             <tr>
-                <th>Baptisepar</th>
+                <th> <b>Baptisé par :</b></th>
                 <td>{{ scout.baptisepar }}</td>
             </tr>
             <tr>
-                <th>Datebapteme</th>
-                <td>{{ scout.datebapteme ? scout.datebapteme|date('Y-m-d H:i:s') : '' }}</td>
+                <th> <b>Date du bapteme</b></th>
+                <td>{{ scout.datebapteme ? scout.datebapteme|date('d-m-Y') : '' }}</td>
             </tr>
             <tr>
-                <th>Lieubapteme</th>
+                <th> <b>Lieu du bapteme</b></th>
                 <td>{{ scout.lieubapteme }}</td>
             </tr>
             <tr>
-                <th>Fonctionparoisse</th>
+                <th> <b>Fonction en paroisse</b></th>
                 <td>{{ scout.fonctionparoisse }}</td>
             </tr>
             <tr>
-                <th>Datescout</th>
-                <td>{{ scout.datescout ? scout.datescout|date('Y-m-d H:i:s') : '' }}</td>
+                <th> <b>Date d'entrée dans le scoutisme</b></th>
+                <td>{{ scout.datescout ? scout.datescout|date('d-m-Y') : '' }}</td>
             </tr>
             <tr>
-                <th>Datepromesse</th>
-                <td>{{ scout.datepromesse ? scout.datepromesse|date('Y-m-d H:i:s') : '' }}</td>
+                <th> <b>Date de la promesse</b></th>
+                <td>{{ scout.datepromesse ? scout.datepromesse|date('d-m-Y') : '' }}</td>
             </tr>
             <tr>
-                <th>Lieupromesse</th>
+                <th> <b>Lieu de la promesse</b></th>
                 <td>{{ scout.lieupromesse }}</td>
             </tr>
             <tr>
-                <th>Fctscoutactu</th>
+                <th> <b>Fonction scoute actuelle</b> :</th>
                 <td>{{ scout.fctscoutactu }}</td>
             </tr>
             <tr>
-                <th>Datenomi</th>
-                <td>{{ scout.datenomi ? scout.datenomi|date('Y-m-d H:i:s') : '' }}</td>
+                <th> <b>Date de nomination</b> :</th>
+                <td>{{ scout.datenomi ? scout.datenomi|date('d-m-Y') : '' }}</td>
             </tr>
-            <tr>
-                <th>Stage1</th>
-                <td>{{ scout.stage1 }}</td>
-            </tr>
-            <tr>
-                <th>Stage1date</th>
-                <td>{{ scout.stage1date ? scout.stage1date|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-            <tr>
-                <th>Stage1lieu</th>
-                <td>{{ scout.stage1lieu }}</td>
-            </tr>
-            <tr>
-                <th>Stage2</th>
-                <td>{{ scout.stage2 }}</td>
-            </tr>
-            <tr>
-                <th>Stage2date</th>
-                <td>{{ scout.stage2date ? scout.stage2date|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-            <tr>
-                <th>Stage2lieu</th>
-                <td>{{ scout.stage2lieu }}</td>
-            </tr>
-            <tr>
-                <th>Stage3</th>
-                <td>{{ scout.stage3 }}</td>
-            </tr>
-            <tr>
-                <th>Stage3date</th>
-                <td>{{ scout.stage3date ? scout.stage3date|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-            <tr>
-                <th>Stage3lieu</th>
-                <td>{{ scout.stage3lieu }}</td>
-            </tr>
-            <tr>
-                <th>Stageinter1</th>
-                <td>{{ scout.stageinter1 }}</td>
-            </tr>
-            <tr>
-                <th>Stageinter1date</th>
-                <td>{{ scout.stageinter1date ? scout.stageinter1date|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-            <tr>
-                <th>Stageinter1lieu</th>
-                <td>{{ scout.stageinter1lieu }}</td>
-            </tr>
-            <tr>
-                <th>Stageinter2</th>
-                <td>{{ scout.stageinter2 }}</td>
-            </tr>
-            <tr>
-                <th>Stageinter2date</th>
-                <td>{{ scout.stageinter2date ? scout.stageinter2date|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-            <tr>
-                <th>Stageinter2lieu</th>
-                <td>{{ scout.stageinter2lieu }}</td>
-            </tr>
-            <tr>
-                <th>Profession</th>
-                <td>{{ scout.profession }}</td>
-            </tr>
-            <tr>
-                <th>Img</th>
-                <td><img src=" {{ asset('img/articles/')}} {{ scout.img }} " class="img-fluid" alt=""> </td>
-            </tr>
+
         </tbody>
     </table>
+      <p><span> <b>STAGE DE FORMATION </b> </span></p>
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>STAGE</th>
+                      <th>DATE</th>
+                      <th>LIEU</th>
+                    </tr>
+                  </thead>
 
-    <a href="{{ path('scout_index') }}">back to list</a>
+                  <tbody>
+                    <tr>
+                      <td>{{ scout.stage1 }}</td>
+                      <td>{{  scout.stage1date ? scout.stage1date|date('d-m-Y') : '' }}</td>
+                      <td>{{ scout.stage1lieu }}</td>
+                    </tr>
+                    <tr>
+                      <td>{{ scout.stage2 }}</td>
+                      <td>{{ scout.stage2date ? scout.stage2date|date('d-m-Y') : '' }}</td>
+                      <td>{{ scout.stage2lieu }}</td>
+                    </tr>
+                    <tr>
+                      <td>{{ scout.stage3 }}</td>
+                      <td>{{  scout.stage3date ? scout.stage3date|date('d-m-Y') : '' }}</td>
+                      <td>{{ scout.stage3lieu }}</td>
+                    </tr>
 
-    <a href="{{ path('scout_edit', {'id': scout.id}) }}">edit</a>
+                  </tbody>
+  </table>
+  <p><span> <b>STAGE DE FORMATION INTERNATIONALE</b> </span></p>
+  <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th>STAGE</th>
+                    <th>DATE</th>
+                    <th>LIEU</th>
+                  </tr>
+                </thead>
 
-    {{ include('scout/_delete_form.html.twig') }}
+                <tbody>
+                  <tr>
+                    <td>{{ scout.stageinter1 }}</td>
+                    <td>{{ scout.Stageinter1date ? scout.Stageinter1date|date('d-m-Y') : ''  }}</td>
+                    <td>{{ scout.stageinter1lieu }}</td>
+                  </tr>
+                  <tr>
+                    <td>{{ scout.stageinter2 }}</td>
+                    <td>{{ scout.Stageinter2date ? scout.Stageinter2date|date('d-m-Y') : '' }}</td>
+                    <td>{{ scout.stageinter2lieu }}</td>
+                  </tr>
+
+
+                  </tbody>
+</table>
+<tr>
+    <th> <b>Proféssion :</b> </th>
+    <td>{{ scout.profession }}</td>
+</tr>
+
+  </div>
+  <div class="col-lg-4">
+  <p><img src="{{ asset('img/articles/')}}{{ scout.img }}" class="img-fluid" alt="{{ scout.img }}"></p>
+
+  <div class="card-body">
+    <a href="{{ path('scout_index') }}" class="btn btn-primary btn-icon-split">
+      <span class="icon text-white-50">
+        <i class="fas fa-flag"></i>
+      </span>
+      <span class="text">RETOURNER</span>
+    </a>
+    <div class="my-2"></div>
+
+    <a href="{{ path('scout_edit', {'id': scout.id}) }}" class="btn btn-warning btn-icon-split">
+      <span class="icon text-white-50">
+        <i class="fas fa-exclamation-triangle"></i>
+      </span>
+      <span class="text">MODIFIER</span>
+    </a>
+
+    <div class="my-2"></div>
+    <a href="{{ path('scout_index') }}" class="btn btn-success btn-icon-info">
+      <span class="icon text-white-50">
+        <i class="fas fa-flag"></i>
+      </span>
+      <span class="text">IMPRIMER</span>
+    </a>
+
+
+  </div>
+</div>
+
+
+ {{ include('scout/_delete_form.html.twig') }}
+  </div>
+</div>
+
+
 {% endblock %}
